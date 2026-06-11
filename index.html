@@ -1802,9 +1802,13 @@
           grid-template-columns: 1fr;
           gap: 2.5rem;
         }
-        .hero-visual,
-        .hero-card {
+        .hero-visual {
           display: none;
+        }
+        /* Afficher la hero-card en bas sur tablette */
+        .hero-card {
+          display: block;
+          max-width: 100%;
         }
         .hero h1 {
           font-size: 2.5rem;
@@ -1828,6 +1832,10 @@
         .nav-links {
           display: none;
         }
+        /* Masquer certains boutons nav sur tablette pour éviter le débordement */
+        .nav-btn {
+          display: none;
+        }
         .mob-menu-btn {
           display: block;
         }
@@ -1841,7 +1849,17 @@
         .sub-header-text h1 {
           font-size: 1.4rem;
         }
+        .essonne-grid {
+          gap: 2.5rem;
+        }
+        .about-grid {
+          gap: 2.5rem;
+        }
+        .vehicule-grid {
+          gap: 2.5rem;
+        }
       }
+
       @media (max-width: 540px) {
         .tarifs-grid,
         .dv-row,
@@ -1866,9 +1884,37 @@
         .bande-in {
           flex-direction: column;
           align-items: flex-start;
+          gap: 0.6rem;
         }
         .hero h1 {
-          font-size: 2rem;
+          font-size: 1.9rem;
+        }
+        .hero-desc {
+          font-size: 0.92rem;
+        }
+        /* Stats du hero en grille 2x2 */
+        .hero-stats {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.25rem;
+          margin-top: 2rem;
+        }
+        .stat-num {
+          font-size: 1.5rem;
+        }
+        /* Hero card masquée sur mobile (déjà dans le formulaire de devis) */
+        .hero-card {
+          display: none;
+        }
+        /* Boutons héro en colonne */
+        .hero-btns {
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+        .hero-btns .btn-primary,
+        .hero-btns .btn-secondary {
+          width: 100%;
+          justify-content: center;
         }
         .slots-grid {
           grid-template-columns: repeat(2, 1fr);
@@ -1880,9 +1926,86 @@
         .rdv-page-card,
         .devis-form-card,
         .contact-form-wrap {
-          padding: 1.5rem;
+          padding: 1.25rem;
         }
         .steps-progress .sp-label {
+          display: none;
+        }
+        /* Sections titres */
+        .section-title {
+          font-size: 1.75rem;
+        }
+        .rdv-inner h2 {
+          font-size: 1.7rem;
+        }
+        /* Taille touch targets plus grands pour les boutons */
+        .btn-primary,
+        .btn-secondary {
+          padding: 1rem 1.5rem;
+          font-size: 0.95rem;
+        }
+        .nav-cta {
+          padding: 0.6rem 0.9rem;
+          font-size: 0.8rem;
+        }
+        /* Phone visible dans nav */
+        .nav-phone {
+          font-size: 0.8rem;
+        }
+        /* Footer */
+        .footer-inner {
+          gap: 2rem;
+        }
+        /* Formulaire contact */
+        .contact-form-wrap {
+          padding: 1.25rem;
+        }
+        /* Calendrier lisible */
+        .cal-day {
+          font-size: 0.8rem;
+        }
+        /* Slot buttons plus hauts */
+        .slot {
+          padding: 0.75rem 0.5rem;
+          font-size: 0.82rem;
+        }
+        /* Tarif cards */
+        .tarif-card {
+          padding: 1.5rem;
+        }
+        /* Service cards */
+        .services-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        /* Essonne CTA */
+        .essonne-cta {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.75rem;
+        }
+        /* RDV banner tel */
+        .rdv-tel {
+          font-size: 1.3rem;
+        }
+        .rdv-cta {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+
+      /* Très petit écran (320px) */
+      @media (max-width: 380px) {
+        .hero h1 {
+          font-size: 1.65rem;
+        }
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        nav {
+          padding: 0 1rem;
+        }
+        .nav-phone {
           display: none;
         }
       }
