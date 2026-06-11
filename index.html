@@ -1994,6 +1994,27 @@
         }
       }
 
+      /* Nav mobile : tout sur une ligne */
+      @media (max-width: 640px) {
+        nav {
+          padding: 0 1rem;
+        }
+        .nav-logo {
+          font-size: 1.15rem;
+        }
+        .nav-phone {
+          display: none;
+        }
+        .nav-cta {
+          font-size: 0.75rem;
+          padding: 0.4rem 0.75rem;
+          white-space: nowrap;
+        }
+        .nav-right {
+          gap: 0.5rem;
+        }
+      }
+
       /* Très petit écran (320px) */
       @media (max-width: 380px) {
         .hero h1 {
@@ -2002,11 +2023,9 @@
         .services-grid {
           grid-template-columns: 1fr;
         }
-        nav {
-          padding: 0 1rem;
-        }
-        .nav-phone {
-          display: none;
+        .nav-cta {
+          font-size: 0.7rem;
+          padding: 0.38rem 0.6rem;
         }
       }
     </style>
